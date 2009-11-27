@@ -3,7 +3,7 @@ program = machine
 cxx = g++
 srcs = main.cpp game.cpp state.cpp
 objs = $(srcs:.cpp=.o)
-flgs = -o3
+flgs = 
 libs = -lsfml-graphics -lsfml-window -lsfml-system
 
 all: $(program)

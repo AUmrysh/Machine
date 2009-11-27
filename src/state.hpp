@@ -1,5 +1,5 @@
-#ifndef __STATE_H__
-#define __STATE_H__
+#ifndef STATE_HPP
+#define STATE_HPP
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
@@ -63,4 +63,4 @@ class State
 		bool buttons_[3];
 };
 
-#endif /* __STATE_H__ */
+#endif /* STATE_HPP */

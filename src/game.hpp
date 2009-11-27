@@ -1,5 +1,5 @@
-#ifndef __GAME_H__
-#define __GAME_H__
+#ifndef GAME_HPP
+#define GAME_HPP
 
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
@@ -29,4 +29,4 @@ class Game
 		State *active_state_;
 };
 
-#endif /* __GAME_H__ */
+#endif /* GAME_HPP */
