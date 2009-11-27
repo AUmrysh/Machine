@@ -1,14 +1,18 @@
 #include "state.hpp"
 
 State::State(sf::RenderWindow *window)
-: window_(window) {
+: window_(window)
+{
 }
 
-State::~State() {
+State::~State()
+{
 }
 
-void State::OnEvent(const sf::Event::Event &e) {
-	switch (e.Type) {
+void State::OnEvent(const sf::Event::Event &e)
+{
+	switch (e.Type)
+	{
 		case sf::Event::KeyPressed:
 			OnKeyPressed(e.Key.Code, e.Key.Alt, e.Key.Control, e.Key.Shift);
 			break;
@@ -21,11 +25,13 @@ void State::OnEvent(const sf::Event::Event &e) {
 			OnMouseMoved(e.MouseMove.X, e.MouseMove.Y);
 			break;
 
-		case sf::Event::MouseButtonPressed: {
+		case sf::Event::MouseButtonPressed:
+		{
 			int x = e.MouseButton.X;
 			int y = e.MouseButton.Y;
 
-			switch (e.MouseButton.Button) {
+			switch (e.MouseButton.Button)
+			{
 				case sf::Mouse::Left:
 					OnMouseLeftDown(x, y);
 					buttons_[0] = true;
@@ -41,18 +47,22 @@ void State::OnEvent(const sf::Event::Event &e) {
 					buttons_[2] = true;
 					break;
 			}
+
 			break;
 		}
 
-		case sf::Event::MouseButtonReleased: {
+		case sf::Event::MouseButtonReleased:
+		{
 			int x = e.MouseButton.X;
 			int y = e.MouseButton.Y;
 
-			switch (e.MouseButton.Button) {
+			switch (e.MouseButton.Button)
+			{
 				case sf::Mouse::Left:
 					OnMouseLeftUp(x, y);
 
-					if (buttons_[0]) {
+					if (buttons_[0])
+					{
 						buttons_[0] = false;
 						OnMouseLeftClick(x, y);
 					}
@@ -62,7 +72,8 @@ void State::OnEvent(const sf::Event::Event &e) {
 				case sf::Mouse::Right:
 					OnMouseRightUp(x, y);
 
-					if (buttons_[1]) {
+					if (buttons_[1])
+					{
 						buttons_[1] = false;
 						OnMouseRightClick(x, y);
 					}
@@ -72,13 +83,15 @@ void State::OnEvent(const sf::Event::Event &e) {
 				case sf::Mouse::Middle:
 					OnMouseMiddleUp(x, y);
 
-					if (buttons_[2]) {
+					if (buttons_[2])
+					{
 						buttons_[2] = false;
 						OnMouseMiddleClick(x, y);
 					}
 
 					break;
 			}
+
 			break;
 		}
 

@@ -1,4 +1,4 @@
-program = ma.hppine
+program = machine
 
 cxx = g++
 srcs = main.cpp game.cpp state.cpp

@@ -6,26 +6,27 @@
 #include <SFML/Graphics.hpp>
 #include "state.hpp"
 
-class Game {
-public:
-	Game(const std::string &title, unsigned int width, unsigned int height, bool fullscreen);
+class Game
+{
+	public:
+		Game(const std::string &title, unsigned int width, unsigned int height, bool fullscreen);
 
-	~Game();
+		~Game();
 
-	void Run();
+		void Run();
 
-	void set_active_state(State *state);
-	
-private:
-	void Initialize();
+		void set_active_state(State *state);
+		
+	private:
+		void Initialize();
 
-	void Update();
+		void Update();
 
-	void Render();
+		void Render();
 
-	bool running_;
-	sf::RenderWindow window_;
-	State *active_state_;
+		bool running_;
+		sf::RenderWindow window_;
+		State *active_state_;
 };
 
 #endif /* __GAME_H__ */
