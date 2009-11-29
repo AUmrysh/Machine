@@ -1,7 +1,8 @@
 #include "state.hpp"
+#include "game.hpp"
 
-State::State(sf::RenderWindow *window)
-: window_(window)
+State::State(Game *game)
+: game_(game)
 {
 }
 

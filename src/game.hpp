@@ -4,7 +4,8 @@
 #include <SFML/System.hpp>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
-#include "state.hpp"
+
+class State;
 
 class Game
 {
@@ -15,7 +16,11 @@ class Game
 
 		void Run();
 
+		void Quit();
+
 		void set_active_state(State *state);
+
+		sf::RenderWindow * get_window() { return &window_; }
 		
 	private:
 		void Initialize();

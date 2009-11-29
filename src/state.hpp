@@ -3,11 +3,12 @@
 
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include "game.hpp"
 
 class State
 {
 	public:
-		State(sf::RenderWindow *window);
+		State(Game *game);
 
 		virtual ~State();
 
@@ -54,12 +55,9 @@ class State
 
 		virtual void OnLostFocus() { }
 
-		sf::RenderWindow * get_window() const { return window_; }
-
-		void set_window(sf::RenderWindow *window) { window_ = window; }
-
+		Game *game_;
+		
 	private:
-		sf::RenderWindow *window_;
 		bool buttons_[3];
 };
 

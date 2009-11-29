@@ -1,5 +1,6 @@
 #include "game.hpp"
 #include "state.hpp"
+#include "menustate.hpp"
 
 Game::Game(const std::string &title, unsigned int width, unsigned int height, bool fullscreen)
 : running_(false), active_state_(0)
@@ -32,6 +33,11 @@ void Game::Run()
 	}
 }
 
+void Game::Quit()
+{
+	running_ = false;
+}
+
 void Game::set_active_state(State *state)
 {
 	if (active_state_)
@@ -52,6 +58,7 @@ void Game::Initialize()
 {
 	window_.UseVerticalSync(false);
 	window_.SetFramerateLimit(60);
+	set_active_state(new MenuState(this));
 }
 
 void Game::Update()
