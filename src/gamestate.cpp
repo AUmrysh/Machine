@@ -8,6 +8,7 @@ GameState::GameState(Game *game)
 void GameState::Render()
 {
 	game_->get_window()->Clear(sf::Color(0, 255, 0));
+	game_->get_window()->Draw(sf::String("Hit ESC to quit"));
 }
 
 void GameState::OnEnter()
