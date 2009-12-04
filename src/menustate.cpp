@@ -16,7 +16,6 @@ MenuState::MenuState(Game *game)
 void MenuState::Render()
 {
 	sf::RenderWindow *rw = game_->get_window();
-	rw->Clear(sf::Color(255, 0, 0));
 	
 	int width = 200;
 	int height = 50;
@@ -34,20 +33,10 @@ void MenuState::Render()
 
 void MenuState::OnEnter()
 {
-	for (int i = 0; i < 255; i += 5)
-	{
-		game_->get_window()->Clear(sf::Color(i, 0, 0));
-		game_->get_window()->Display();
-	}
 }
 
 void MenuState::OnExit()
 {
-	for (int i = 255; i >= 0; i -= 5)
-	{
-		game_->get_window()->Clear(sf::Color(i, 0, 0));
-		game_->get_window()->Display();
-	}
 }
 
 void MenuState::OnKeyPressed(sf::Key::Code key, bool alt, bool ctrl, bool shift)

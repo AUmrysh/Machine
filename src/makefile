@@ -1,23 +1,30 @@
-program = machine
+builddir = ../build
+bindir = ../bin
+program = $(bindir)/machine
 
 cxx = g++
 srcs = main.cpp game.cpp state.cpp menustate.cpp menuentry.cpp gamestate.cpp
-objs = $(srcs:.cpp=.o)
+objs = $(srcs:%.cpp=$(builddir)/%.o)
+flgs = -Wall
 libs = -lsfml-graphics -lsfml-window -lsfml-system
 
-all: $(program)
+all: compile $(program)
 
-run: $(program)
+run: compile $(program)
 	./$(program)
 
 clean:
-	rm *.o $(program)
+	rm $(builddir)/*.o $(program)
+
+compile:
+	mkdir -p $(builddir)
+	mkdir -p $(bindir)
 
 $(program): $(objs)
 	$(cxx) -o $(program) $(objs) $(libs)
 
-main.o: main.cpp
-	$(cxx) -c $<
+$(builddir)/main.o: main.cpp
+	$(cxx) $(flgs) -c $< -o $@
 
-%.o: %.cpp %.hpp
-	$(cxx) -c $<
+$(builddir)/%.o: %.cpp %.hpp
+	$(cxx) $(flgs) -c $< -o $(builddir)/$@
