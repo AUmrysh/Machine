@@ -12,8 +12,6 @@ float alien_x = 0.0f;
 float alien_y = 0.0f;
 float alien_velx = 2.3f;
 float alien_vely = 2.3f;
-float alien_height = 311.0f; //GODDAMNIT how do you get the alien images width?!
-float alien_width = 224.0f;
 
 void GameState::Render()
 {
@@ -30,11 +28,11 @@ void GameState::Render()
 		alien.SetScale(0.5f,0.5f);
 		alien_x += alien_velx;
 		alien_y += alien_vely;
-		if (alien_x + alien_width/2 > game_->get_window()->GetWidth() || alien_x < 0)
+		if (alien_x + alien.GetSize().x > game_->get_window()->GetWidth() || alien_x < 0)
 		{
 		    alien_velx *= -1;
 		}
-		if (alien_y + alien_height/2 > game_->get_window()->GetHeight() || alien_y < 0)
+		if (alien_y + alien.GetSize().y > game_->get_window()->GetHeight() || alien_y < 0)
 		{
 		    alien_vely *= -1;
 		}
