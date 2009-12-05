@@ -1,0 +1,91 @@
+# depslib dependency file v1.0
+1259971553 source:/home/alex/sfml/git/Machine/src/game.cpp
+	"game.hpp"
+	"state.hpp"
+	"menustate.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/src/game.hpp
+	<SFML/System.hpp>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+
+1259971553 /home/alex/sfml/git/Machine/src/state.hpp
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	"game.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/src/menustate.hpp
+	<vector>
+	<string>
+	"state.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/src/gamestate.cpp
+	"gamestate.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/src/gamestate.hpp
+	"state.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/src/main.cpp
+	"game.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/src/menuentry.cpp
+	"menuentry.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/src/menuentry.hpp
+	<string>
+	<SFML/Graphics.hpp>
+
+1259971553 source:/home/alex/sfml/git/Machine/src/menustate.cpp
+	"menustate.hpp"
+	"menuentry.hpp"
+	"gamestate.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/src/state.cpp
+	"state.hpp"
+	"game.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/Machine/src/game.cpp
+	"game.hpp"
+	"state.hpp"
+	"menustate.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/Machine/src/game.hpp
+	<SFML/System.hpp>
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+
+1259971553 /home/alex/sfml/git/Machine/Machine/src/state.hpp
+	<SFML/Window.hpp>
+	<SFML/Graphics.hpp>
+	"game.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/Machine/src/menustate.hpp
+	<vector>
+	<string>
+	"state.hpp"
+
+1259972203 source:/home/alex/sfml/git/Machine/Machine/src/gamestate.cpp
+	"gamestate.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/Machine/src/gamestate.hpp
+	"state.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/Machine/src/main.cpp
+	"game.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/Machine/src/menuentry.cpp
+	"menuentry.hpp"
+
+1259971553 /home/alex/sfml/git/Machine/Machine/src/menuentry.hpp
+	<string>
+	<SFML/Graphics.hpp>
+
+1259971553 source:/home/alex/sfml/git/Machine/Machine/src/menustate.cpp
+	"menustate.hpp"
+	"menuentry.hpp"
+	"gamestate.hpp"
+
+1259971553 source:/home/alex/sfml/git/Machine/Machine/src/state.cpp
+	"state.hpp"
+	"game.hpp"
+
